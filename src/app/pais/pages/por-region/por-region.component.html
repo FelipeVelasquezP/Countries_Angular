@@ -1,0 +1,13 @@
+<h2>Por Region: {{regionActual | titlecase}}</h2>
+<hr>
+
+<button type="button"  
+*ngFor="let region of regiones" 
+[class]="changeCSS(region)"
+(click)="buscar(region)" style="margin-right: 6px;">{{region | titlecase}}</button>
+<br>
+<div class="row">
+    <div class="col">
+        <app-pais-tabla [paises]="paises"></app-pais-tabla>
+    </div>
+</div>
